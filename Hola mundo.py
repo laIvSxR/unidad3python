@@ -1,2 +1,2 @@
-mensaje="hola mundo"
+mensaje="hola mundo2"
 print(mensaje);
