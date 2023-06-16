@@ -11,8 +11,23 @@ def calcular_descuento(precio, descuento):
     return descuento, total_descuento
 
 def calcular_imc(peso, altura):
-    imc = peso / (altura ** 2)
-    return imc
+    estado = " no calculado"
+    imc = peso / altura ** 2
+    if  imc < 18.5 :
+        estado =" bajo peso "
+    elif imc >= 18.5 and imc <= 24.9:
+        estado = "adecuado "
+    elif imc >=25 and imc <= 29.9:
+        estado = " sobre peso "
+    elif imc >= 30 and imc <= 34.9:
+        estado=" obesidad grado 1 "
+    elif imc >= 35 and imc <= 39.9:
+        estado= " obesidad grado 2 "
+    elif imc >= 40 :
+        estado = "obesidad grado 3 " 
+
+    return estado + "imc = " + str (imc) 
+
 
 def mostrar_menu():
     print("Menú:")
